@@ -714,6 +714,15 @@
             background: var(--primary); color: #FFFFFF; transform: translateY(-1px);
         }
         .footer-social svg { width: 14px; height: 14px; }
+        .footer-social .prtimes-text {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 13px; font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+        .footer-social .prtimes-text .pr-p { color: var(--primary); }
+        .footer-social .prtimes-text .pr-r { color: currentColor; }
+        .footer-social .prtimes-text:hover .pr-p,
+        .footer-social .prtimes-text:hover .pr-r { color: #FFFFFF; }
         .footer-bottom {
             max-width: 1200px; margin: 0 auto;
             padding-top: 2rem; border-top: 1px solid var(--border);
@@ -1106,20 +1115,20 @@
                 <li><a href="https://www.sparticle.com/ja/recruit" target="_blank" rel="noopener">採用情報</a></li>
             </ul>
             <div class="footer-social">
+                <a href="https://prtimes.jp/main/html/searchrlp/company_id/87269" target="_blank" rel="noopener" aria-label="PR TIMES" title="PR TIMES" class="prtimes-text">
+                    <span class="pr-p">P</span><span class="pr-r">R</span>
+                </a>
                 <a href="https://x.com/GBaseHub" target="_blank" rel="noopener" aria-label="X" title="X (Twitter)">
                     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                </a>
-                <a href="https://www.youtube.com/@sparticle_gbase" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                </a>
-                <a href="https://note.com/sparticle_gbase" target="_blank" rel="noopener" aria-label="note" title="note">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M0 .279c4.623 0 10.953-.235 15.498-.117 6.099.156 8.39 2.813 8.468 9.374.077 3.71 0 14.335 0 14.335h-6.598c0-9.296.04-10.83 0-13.759-.078-2.578-.814-3.807-2.795-4.041-2.097-.235-7.975-.04-7.975-.04v17.84H0Z"/></svg>
                 </a>
                 <a href="https://www.linkedin.com/company/sparticle-inc/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
                     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45C23.2 24 24 23.23 24 22.28V1.72C24 .77 23.2 0 22.22 0z"/></svg>
                 </a>
-                <a href="https://prtimes.jp/main/html/searchrlp/company_id/87269" target="_blank" rel="noopener" aria-label="PR TIMES" title="PR TIMES">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm2 4v2h12V8H6zm0 4v2h8v-2H6zm0 4v2h12v-2H6z"/></svg>
+                <a href="https://note.com/sparticle_gbase" target="_blank" rel="noopener" aria-label="note" title="note">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M0 .279c4.623 0 10.953-.235 15.498-.117 6.099.156 8.39 2.813 8.468 9.374.077 3.71 0 14.335 0 14.335h-6.598c0-9.296.04-10.83 0-13.759-.078-2.578-.814-3.807-2.795-4.041-2.097-.235-7.975-.04-7.975-.04v17.84H0Z"/></svg>
+                </a>
+                <a href="https://www.youtube.com/@sparticle_gbase" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
                 </a>
             </div>
         </div>
