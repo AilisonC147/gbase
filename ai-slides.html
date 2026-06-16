@@ -544,8 +544,12 @@
             transition: color 0.18s ease;
         }
         .sol-link:hover { color: var(--primary-deep); text-decoration: underline; text-underline-offset: 2px; }
-        .related-link { margin-top: 0.9rem; font-size: 0.9rem; }
-        .related-link a { color: var(--primary-deep); font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
+        .related-link { margin-top: 0.9rem; font-size: 0.85rem; }
+        .related-link a {
+            color: var(--text-muted); font-weight: 600;
+            text-decoration: none; transition: color 0.18s ease;
+        }
+        .related-link a:hover { color: var(--primary-deep); text-decoration: underline; text-underline-offset: 2px; }
 
         /* ========= 5-Step Flow ========= */
         .steps-wrap {
