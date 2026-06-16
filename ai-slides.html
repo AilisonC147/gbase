@@ -546,10 +546,12 @@
         .sol-link:hover { color: var(--primary-deep); text-decoration: underline; text-underline-offset: 2px; }
         .related-link { margin-top: 0.9rem; font-size: 0.85rem; }
         .related-link a {
-            color: var(--text-muted); font-weight: 600;
-            text-decoration: none; transition: color 0.18s ease;
+            display: inline-flex; align-items: center; gap: 0.3rem;
+            color: var(--primary-deep); font-weight: 800;
+            text-decoration: none; transition: gap 0.18s ease;
         }
-        .related-link a:hover { color: var(--primary-deep); text-decoration: underline; text-underline-offset: 2px; }
+        .related-link a::after { content: "→"; font-size: 0.95rem; transition: transform 0.18s ease; }
+        .related-link a:hover { gap: 0.55rem; }
 
         /* ========= 5-Step Flow ========= */
         .steps-wrap {
@@ -1005,7 +1007,7 @@
                         <li>全引用に1クリックで飛べる出典リンク付き</li>
                         <li>社内ナレッジを情報源に組み合わせる構成にも対応</li>
                     </ul>
-                    <p class="related-link"><a href="https://gbase.ai/blog/08-ai-agent-document-creation/">→ 関連記事：「AIエージェントで資料作成を自動化：文書・レポート・提案書の効率化」</a></p>
+                    <p class="related-link"><a href="https://gbase.ai/blog/08-ai-agent-document-creation/">関連記事：「AIエージェントで資料作成を自動化：文書・レポート・提案書の効率化」</a></p>
                 </div>
                 <div class="diff-image">
                     <img src="images/diff-01-research.png" alt="30+ソース(Web/統計/ニュース/論文/レポート)からリサーチ統合エンジンへ流入し、出典リンク[1][2][3]付きスライドを生成するフロー図" width="2752" height="1536" loading="lazy" decoding="async">
