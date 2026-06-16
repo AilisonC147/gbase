@@ -513,14 +513,17 @@
             position: absolute;
             left: 0; top: 0;
         }
+        .sol-footer {
+            margin-top: auto;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(68, 210, 255, 0.22);
+            display: flex; flex-direction: column; gap: 0.65rem;
+        }
         .sol-cta {
             display: flex;
             align-items: center;
             justify-content: flex-start;
             gap: 0.3rem;
-            margin-top: auto;
-            padding-top: 1rem;
-            border-top: 1px solid rgba(68, 210, 255, 0.22);
             font-size: 0.82rem; font-weight: 800;
             color: var(--primary-deep);
             text-decoration: none;
@@ -533,8 +536,14 @@
         }
         .sol-cta:hover { gap: 0.55rem; }
         .sol-cta:hover::after { transform: translateX(2px); }
-        .sol-related { margin-top: 0.7rem; font-size: 0.8rem; line-height: 1.5; }
-        .sol-related a { color: var(--primary-deep); font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
+        .sol-link {
+            display: flex; align-items: flex-start; gap: 0.35rem;
+            font-size: 0.78rem; font-weight: 600; line-height: 1.5;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.18s ease;
+        }
+        .sol-link:hover { color: var(--primary-deep); text-decoration: underline; text-underline-offset: 2px; }
         .related-link { margin-top: 0.9rem; font-size: 0.9rem; }
         .related-link a { color: var(--primary-deep); font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
 
@@ -919,8 +928,10 @@
                         <li>時間削減 85-90%、企画の練り込みと推敲に時間を投入可能に。</li>
                         <li>コンペの回転率が構造的に向上、年間受注機会の総量が拡大。</li>
                     </ul>
-                    <a href="https://hub.gbase.ai/solution-advertising" class="sol-cta">広告代理店向けの活用法を見る</a>
-                    <p class="sol-related"><a href="https://gbase.ai/blog/04-ai-agent-efficiency/">関連記事：「AIエージェントで業務効率化：導入から成果までの完全ガイド」</a></p>
+                    <div class="sol-footer">
+                        <a href="https://hub.gbase.ai/solution-advertising" class="sol-cta">広告代理店向けの活用法を見る</a>
+                        <a href="https://gbase.ai/blog/04-ai-agent-efficiency/" class="sol-link">関連記事：「AIエージェントで業務効率化：導入から成果までの完全ガイド」</a>
+                    </div>
                 </div>
                 <div class="ps-card solution-card">
                     <div class="sol-title">営業1人あたりの受注上限を、2.3倍に<sup class="cite">※</sup></div>
@@ -932,8 +943,10 @@
                         <li>成約サイクル -65%、提案待ち時間で失う案件をゼロに。</li>
                         <li>営業1人あたりの提案数を増やし、受注規模を構造的に拡張。</li>
                     </ul>
-                    <a href="https://hub.gbase.ai/solution-sales" class="sol-cta">営業部門向けの活用法を見る</a>
-                    <p class="sol-related"><a href="https://gbase.ai/blog/01-sales-ai-agent/">関連記事：「営業AIエージェントとは？業務効率化の実現方法と活用事例」</a></p>
+                    <div class="sol-footer">
+                        <a href="https://hub.gbase.ai/solution-sales" class="sol-cta">営業部門向けの活用法を見る</a>
+                        <a href="https://gbase.ai/blog/01-sales-ai-agent/" class="sol-link">関連記事：「営業AIエージェントとは？業務効率化の実現方法と活用事例」</a>
+                    </div>
                 </div>
                 <div class="ps-card solution-card">
                     <div class="sol-title">提案成功率を+48.6%、案件単価とリピートが伸びる<sup class="cite">※</sup></div>
@@ -945,8 +958,10 @@
                         <li>VI準拠率を生成ごとに数値化、稟議の品質保証としても提示可能。</li>
                         <li>年間PJ +36-50%、案件単価とリピート率の底上げに直結。</li>
                     </ul>
-                    <a href="https://hub.gbase.ai/solution" class="sol-cta">コンサル向けの活用法を見る</a>
-                    <p class="sol-related"><a href="https://gbase.ai/blog/06-ai-agent-consulting/">関連記事：「コンサルタント向けAIエージェント：活用方法と導入メリット」</a></p>
+                    <div class="sol-footer">
+                        <a href="https://hub.gbase.ai/solution" class="sol-cta">コンサル向けの活用法を見る</a>
+                        <a href="https://gbase.ai/blog/06-ai-agent-consulting/" class="sol-link">関連記事：「コンサルタント向けAIエージェント：活用方法と導入メリット」</a>
+                    </div>
                 </div>
                 <div class="ps-card solution-card">
                     <div class="sol-title">エース1人退職でも、勝ち筋を組織知識で継承<sup class="cite">※</sup></div>
@@ -958,7 +973,9 @@
                         <li>情報アクセス -80%、ベテランの暗黙知を誰でもワンクリックで引き出せる体制に。</li>
                         <li>エース退職でも顧客対応・提案品質が落ちない、属人化リスクをゼロへ。</li>
                     </ul>
-                    <p class="sol-related"><a href="https://gbase.ai/blog/09-ai-agent-internal/">関連記事：「社内AIエージェント導入ガイド：効果的な展開方法と活用事例」</a></p>
+                    <div class="sol-footer">
+                        <a href="https://gbase.ai/blog/09-ai-agent-internal/" class="sol-link">関連記事：「社内AIエージェント導入ガイド：効果的な展開方法と活用事例」</a>
+                    </div>
                 </div>
             </div>
         </div>
