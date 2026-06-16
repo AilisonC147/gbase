@@ -545,6 +545,10 @@
         }
         .sol-link:hover { color: var(--primary-deep); text-decoration: underline; text-underline-offset: 2px; }
         .sol-cta--empty { visibility: hidden; }
+        .section-link { max-width: 1100px; text-align: center; margin: 1.4rem auto 0; font-size: 0.9rem; }
+        .section-link a { color: var(--primary-deep); font-weight: 800; text-decoration: none; }
+        .section-link a::after { content: "→"; margin-left: 0.3rem; display: inline-block; transition: transform 0.18s ease; }
+        .section-link a:hover::after { transform: translateX(3px); }
 
         /* ========= 5-Step Flow ========= */
         .steps-wrap {
@@ -988,7 +992,7 @@
     <div class="container">
         <h2 class="section-title">GBase Knowledge ならではの、4つの特長</h2>
         <p class="section-subtitle">
-            リサーチ・テンプレート・編集モード・履歴管理。<br>提案書づくりの根幹を、4つの柱として製品に組み込みました。
+            リサーチ・テンプレート・編集モード・履歴管理。<br>AIによる提案書作成の根幹を、4つの柱として製品に組み込みました。
         </p>
         <div class="diff-rows">
             <div class="diff-row">
@@ -1088,6 +1092,7 @@
         <p class="steps-note">
             <strong>全ステップAIによる自動処理</strong>と<strong>全ステップ人間による介入</strong>、両方に対応します。
         </p>
+        <p class="section-link"><a href="https://gbase.ai/blog/08-ai-agent-document-creation/">関連記事：「AIエージェントで資料作成を自動化：文書・レポート・提案書の効率化」</a></p>
     </div>
 </section>
 
