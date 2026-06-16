@@ -546,12 +546,14 @@
         .sol-link:hover { color: var(--primary-deep); text-decoration: underline; text-underline-offset: 2px; }
         .related-link { margin-top: 0.9rem; font-size: 0.85rem; }
         .related-link a {
-            display: inline-flex; align-items: center; gap: 0.3rem;
             color: var(--primary-deep); font-weight: 800;
-            text-decoration: none; transition: gap 0.18s ease;
+            text-decoration: none;
         }
-        .related-link a::after { content: "→"; font-size: 0.95rem; transition: transform 0.18s ease; }
-        .related-link a:hover { gap: 0.55rem; }
+        .related-link a::after {
+            content: "→"; font-size: 0.95rem; margin-left: 0.3rem;
+            display: inline-block; transition: transform 0.18s ease;
+        }
+        .related-link a:hover::after { transform: translateX(3px); }
 
         /* ========= 5-Step Flow ========= */
         .steps-wrap {
