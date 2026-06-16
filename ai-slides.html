@@ -544,15 +544,7 @@
             transition: color 0.18s ease;
         }
         .sol-link:hover { color: var(--primary-deep); text-decoration: underline; text-underline-offset: 2px; }
-        .sol-solo-link {
-            font-size: 0.82rem; font-weight: 800; line-height: 1.5;
-            color: var(--primary-deep); text-decoration: none;
-        }
-        .sol-solo-link::after {
-            content: "→"; font-size: 0.95rem; margin-left: 0.3rem;
-            display: inline-block; transition: transform 0.18s ease;
-        }
-        .sol-solo-link:hover::after { transform: translateX(3px); }
+        .sol-cta--empty { visibility: hidden; }
 
         /* ========= 5-Step Flow ========= */
         .steps-wrap {
@@ -981,7 +973,8 @@
                         <li>エース退職でも顧客対応・提案品質が落ちない、属人化リスクをゼロへ。</li>
                     </ul>
                     <div class="sol-footer">
-                        <a href="https://gbase.ai/blog/09-ai-agent-internal/" class="sol-solo-link">関連記事：「社内AIエージェント導入ガイド：効果的な展開方法と活用事例」</a>
+                        <span class="sol-cta sol-cta--empty" aria-hidden="true">&nbsp;</span>
+                        <a href="https://gbase.ai/blog/09-ai-agent-internal/" class="sol-link">関連記事：「社内AIエージェント導入ガイド：効果的な展開方法と活用事例」</a>
                     </div>
                 </div>
             </div>
