@@ -341,14 +341,16 @@
         }
         .hero-mockup {
             border-radius: 16px;
-            border: 1px solid var(--border);
+            border: 1px solid rgba(15, 23, 42, 0.06);
             overflow: hidden;
             background: #FFFFFF;
+            box-shadow: 0 24px 60px -20px rgba(15, 23, 42, 0.20),
+                        0 8px 20px -12px rgba(15, 23, 42, 0.10);
         }
         .hero-mockup img,
         .hero-mockup video { width: 100%; height: auto; display: block; }
         /* YouTube facade (click-to-load) */
-        .yt-facade { position: relative; width: 100%; aspect-ratio: 16 / 9; cursor: pointer; overflow: hidden; background: #000; }
+        .yt-facade { position: relative; width: 100%; aspect-ratio: 16 / 9; cursor: pointer; overflow: hidden; background: var(--bg-soft); }
         .yt-facade img { width: 100%; height: 100%; object-fit: cover; display: block; }
         .yt-facade iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
         .yt-play { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 72px; height: 72px; border: 0; border-radius: 50%; background: rgba(0, 0, 0, 0.6); cursor: pointer; transition: background .2s, transform .2s; }
