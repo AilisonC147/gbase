@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI議事録・会議の自動文字起こし | GBase Knowledge — 録音するだけで議事録・要約・ナレッジ化</title>
-    <meta name="description" content="GBase Knowledge のAI議事録機能。10言語以上のリアルタイム文字起こし、テンプレート議事録、AI要約、ナレッジベースへの自動蓄積まで。Zoom・Teams など会議ツールを選ばず使える、法人向けAI議事録。">
-    <meta name="keywords" content="AI議事録,議事録 自動作成,文字起こし AI,会議 文字起こし,AI要約,議事録アプリ,Zoom 議事録,Teams 議事録,多言語 文字起こし,GBase Knowledge">
+    <meta name="description" content="GBase Knowledge のAI議事録機能。10言語以上のリアルタイム文字起こし・話者自動分離、テンプレート議事録、AI要約、ミーティングインサイト（先行提供）、ナレッジ蓄積まで。Zoom・Teams など会議ツールを選ばず使える法人向けAI議事録。">
+    <meta name="keywords" content="AI議事録,議事録 自動作成,文字起こし AI,会議 文字起こし,AI要約,議事録アプリ,Zoom 議事録,Teams 議事録,多言語 文字起こし,話者分離,ミーティングインサイト,VOC,GBase Knowledge">
     <meta name="robots" content="index,follow">
 
     <meta property="og:title" content="AI議事録・会議の自動文字起こし | GBase Knowledge">
-    <meta property="og:description" content="録音するだけで、文字起こし・AI要約・議事録が自動完成。会議のすべてを検索できるナレッジ資産に変える、法人向けAI議事録機能です。">
+    <meta property="og:description" content="録音するだけで、文字起こし・AI要約・議事録・インサイトが自動で揃う。会議のすべてを検索できるナレッジ資産に変える、法人向けAI議事録機能です。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://gbase.ai/ai-meeting">
-    <meta property="og:image" content="https://gbase.ai/og/ai-meeting.jpg">
+    <meta property="og:image" content="https://ailisonc147.github.io/gbase/og/ai-meeting.png">
     <meta property="og:locale" content="ja_JP">
     <meta property="og:site_name" content="GBase">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="AI議事録・会議の自動文字起こし | GBase Knowledge">
-    <meta name="twitter:description" content="録音するだけで、文字起こし・AI要約・議事録が自動完成。会議のすべてを検索できるナレッジ資産に変える、法人向けAI議事録機能です。">
-    <meta name="twitter:image" content="https://gbase.ai/og/ai-meeting.jpg">
+    <meta name="twitter:description" content="録音するだけで、文字起こし・AI要約・議事録・インサイトが自動で揃う。会議のすべてを検索できるナレッジ資産に変える、法人向けAI議事録機能です。">
+    <meta name="twitter:image" content="https://ailisonc147.github.io/gbase/og/ai-meeting.png">
 
     <link rel="canonical" href="https://gbase.ai/ai-meeting">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,13 +49,15 @@
       },
       "featureList": [
         "10言語以上のリアルタイム文字起こし（発言は原語のまま記録、訳文切替可）",
-        "AI要約・議事録テンプレート（複数テンプレート切替・履歴保持・My Template対応）",
+        "話者の自動分離と話者名の一括変更",
+        "AI要約・議事録テンプレート（業種・用途別テンプレート切替・履歴保持・My Template対応）",
         "会議ノートのAI自動補完（キーワードメモを文脈込みの完全な記録に）",
+        "ミーティングインサイト：会議直後にお客様の本音・リスク・次アクションを自動分析（先行提供中）",
         "議事録のナレッジベース自動蓄積、横断検索・チャット@引用に対応",
         "会議後のアクション支援（お礼メール・次回アジェンダの下書き生成）",
         "Web・デスクトップ（Mac/Windows）・iOS のマルチデバイス対応",
         "デスクトップアプリはシステム音声を直接録音、Zoom・Teams など会議ツール非依存",
-        "ローカル音声ファイル（.wav 等）のアップロード解析に対応"
+        "ローカル音声ファイル（.wav・.mp3・.m4a 等）のアップロード解析に対応"
       ]
     }
     </script>
@@ -129,7 +131,15 @@
           "name": "議事録のフォーマットは変更できますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "はい。複数の議事録テンプレートからワンクリックで切り替えて再生成できます。切替前のバージョンは履歴として保持されます。My Template機能を使えば、御社専用の議事録フォーマットも登録できます。"
+            "text": "はい。業種・用途別の議事録テンプレートからワンクリックで切り替えて再生成できます。切替前のバージョンは履歴として保持されます。My Template機能を使えば、御社専用の議事録フォーマットも登録できます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "話者の区別（誰が話したか）はできますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。発言をスピーカー単位で自動分離して記録します。話者名はあとから一括で付け替えることができ、議事録の精度をさらに高められます。"
           }
         },
         {
@@ -137,7 +147,15 @@
           "name": "過去の録音ファイルも取り込めますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "はい。.wav などの音声ファイルをアップロードして、同じように文字起こし・要約・ナレッジ化ができます。これまでに蓄積した録音資産もそのまま活用いただけます。"
+            "text": "はい。.wav・.mp3・.m4a などの音声ファイルをアップロードして、同じように文字起こし・要約・ナレッジ化ができます。これまでに蓄積した録音資産もそのまま活用いただけます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ミーティングインサイト（VOC分析）とは何ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "会議終了と同時にAIが内容を自動分析し、お客様の本音・リスク信号・次のアクションをカード形式で提示する機能です。現在は先行提供中のため、ご利用をご希望の場合はお問い合わせフォームよりご相談ください。"
           }
         },
         {
@@ -676,6 +694,29 @@
             border: 1px solid var(--border);
             background: #FFFFFF;
         }
+        .diff-badge {
+            display: inline-block; vertical-align: middle;
+            margin-left: 0.6rem; padding: 0.18rem 0.75rem;
+            font-size: 0.72rem; font-weight: 700; letter-spacing: 0.02em;
+            color: #B45309; background: rgba(245, 158, 11, 0.12);
+            border: 1px solid rgba(245, 158, 11, 0.4);
+            border-radius: 999px; white-space: nowrap;
+        }
+        .inline-link {
+            color: var(--primary-deep); font-weight: 700;
+            text-decoration: underline; text-underline-offset: 3px;
+            text-decoration-color: var(--primary-line);
+        }
+        .inline-link:hover { text-decoration-color: var(--primary-deep); }
+        .plat-cta {
+            display: inline-flex; align-items: center; gap: 0.3rem;
+            margin-top: 1rem;
+            font-size: 0.85rem; font-weight: 800; color: var(--primary-deep);
+            transition: gap 0.18s ease;
+        }
+        .plat-cta::after { content: "→"; transition: transform 0.18s ease; }
+        .plat-cta:hover { gap: 0.55rem; }
+        .plat-cta:hover::after { transform: translateX(2px); }
 
         /* ========= Platforms (3 entry points) ========= */
         .plat-wrap {
@@ -887,7 +928,7 @@
 
 <!-- ========================= Hero ========================= -->
 <section class="hero">
-    <h1>会議が終わった瞬間、<br><span class="accent">議事録も、要約も</span>、できている。</h1>
+    <h1>会議が終わった瞬間、<br><span class="accent">議事録も、要約も、インサイトも</span>。</h1>
     <p class="hero-subtitle">
         録音から文字起こし・AI要約・ナレッジ蓄積までを一気通貫。<br>
         「作って終わり」の議事録ツールではなく、会議のすべてを検索できる知識資産に変える、GBase Knowledge のAI議事録機能です。
@@ -898,7 +939,7 @@
     </div>
     <p class="hero-note">
         <span class="check">✓</span>10言語以上のリアルタイム文字起こし<span class="sep">|</span>
-        <span class="check">✓</span>20分の会議を約4分で解析<sup>※</sup><span class="sep">|</span>
+        <span class="check">✓</span>20分の会議を約4分で解析（※目安）<span class="sep">|</span>
         <span class="check">✓</span>Web・デスクトップ・iOS対応
     </p>
     <div class="hero-mockup-wrap">
@@ -980,10 +1021,10 @@
                 <div class="ps-card pain-card">
                     <h4>プロジェクトマネージャー</h4>
                     <h3>決定事項とToDoが、会議のたびに流れていく</h3>
-                    <p class="ps-detail">定例の議事録は書き手によって粒度がバラバラ。決まったことと宿題が追えず、次の会議で「あれ、どうなりました？」を繰り返すことに。</p>
+                    <p class="ps-detail">定例の議事録は書き手によって粒度がバラバラ。「前回どう決めたか」を探し回り、次の会議で「あれ、どうなりました？」を繰り返すことに。</p>
                 </div>
                 <div class="ps-card pain-card">
-                    <h4>マネージャー・経営企画</h4>
+                    <h4>マネージャー・経営層</h4>
                     <h3>過去の会議の経緯が、担当者の記憶にしかない</h3>
                     <p class="ps-detail">どの案件で何が話されたかは、出席者に聞くしかない。担当交代や退職のたびに、商談の文脈と顧客の要望が組織から消えていく。</p>
                 </div>
@@ -1079,15 +1120,15 @@
 <!-- ========================= 4 Differentiators ========================= -->
 <section class="section">
     <div class="container">
-        <h2 class="section-title">GBase Knowledge ならではの、4つの特長</h2>
+        <h2 class="section-title">GBase Knowledge ならではの、5つの特長</h2>
         <p class="section-subtitle">
-            文字起こしの正確さだけでは、会議は資産になりません。<br>ナレッジ化・多言語・テンプレート・ノート補完。議事録の「その先」までを、4つの柱として組み込みました。
+            文字起こしの正確さだけでは、会議は資産になりません。<br>ナレッジ化・多言語・テンプレート・ノート補完・インサイト。議事録の「その先」までを、5つの柱として組み込みました。
         </p>
         <div class="diff-rows">
             <div class="diff-row">
                 <div class="diff-text">
                     <h3>議事録を、検索できるナレッジ資産に変える</h3>
-                    <p>一般的な文字起こしツールは、議事録の生成で終わります。GBase Knowledge は会議の内容をプロジェクトの知識ベースに自動で蓄積。文書・記事・ノートと同じ場所に整理され、あとから検索することも、AIに質問することもできる「組織の記憶」になります。</p>
+                    <p>一般的な文字起こしツールは、議事録の生成で終わります。GBase Knowledge は会議の内容をプロジェクトの知識ベースに自動で蓄積。文書・記事・ノートと同じ場所に整理され、あとから検索することも、AIに質問することもできる「組織の記憶」になります。蓄積した会議の内容は、<a href="ai-slides.html" class="inline-link">AIスライド機能</a>で提案資料へ展開することもできます。</p>
                     <ul>
                         <li>会議記録をプロジェクトへ自動整理・蓄積</li>
                         <li>チャットで@引用し、AIの回答根拠として活用</li>
@@ -1137,9 +1178,10 @@
             <div class="diff-row reverse">
                 <div class="diff-text">
                     <h3>10言語以上を、原語のまま正確に記録する</h3>
-                    <p>日本語・英語・中国語・ドイツ語など、10言語以上にリアルタイム対応。発言は原語のまま忠実に記録しながら、表示する訳文はワンクリックで切り替えられます。海外拠点との定例も、外国語での商談も、翻訳担当を挟まずそのまま議事録になります。</p>
+                    <p>日本語・英語・中国語・ドイツ語など、10言語以上にリアルタイム対応。発言は話者ごとに自動で分離し、原語のまま忠実に記録しながら、表示する訳文はワンクリックで切り替えられます。海外拠点との定例も、外国語での商談も、翻訳担当を挟まずそのまま議事録になります。</p>
                     <ul>
                         <li>原語で記録するため、元の発言情報を失わない</li>
+                        <li>発言を話者ごとに自動分離、話者名はあとから一括変更</li>
                         <li>訳文の表示言語はワンクリックで切替</li>
                         <li>複数言語が混ざる会議も、1つの議事録に統合</li>
                     </ul>
@@ -1183,9 +1225,9 @@
             <div class="diff-row">
                 <div class="diff-text">
                     <h3>議事録の「型」を、テンプレートで統一する</h3>
-                    <p>複数の議事録テンプレートから用途に合わせて選び、ワンクリックで切り替えて再生成。切替前のバージョンは履歴として残るので、比較しながら最適な型を選べます。My Template 機能を使えば、御社の議事録フォーマットをそのまま再現することも可能です。</p>
+                    <p>業種・用途別の議事録テンプレートから選び、ワンクリックで切り替えて再生成。切替前のバージョンは履歴として残るので、比較しながら最適な型を選べます。My Template 機能を使えば、御社の議事録フォーマットをそのまま再現することも可能です。</p>
                     <ul>
-                        <li>複数テンプレートをワンクリックで切替・再生成</li>
+                        <li>業種・用途別テンプレートをワンクリックで切替・再生成</li>
                         <li>切替の履歴を保持、過去バージョンもいつでも確認</li>
                         <li>My Template で御社専用フォーマットを登録</li>
                     </ul>
@@ -1265,6 +1307,53 @@
                     </svg>
                 </div>
             </div>
+            <div class="diff-row">
+                <div class="diff-text">
+                    <h3>お客様の「本音」を、AIが拾い上げる<span class="diff-badge">先行提供中</span></h3>
+                    <p>ミーティングインサイトは、会議が終わると同時にAIが内容を自動分析。口に出されなかった懸念や購買の温度感、解約リスクの兆候を、根拠となる発言と併せてカード形式で提示します。日本の商談で人が担ってきた「空気を読む」を、AIが引き受けます。</p>
+                    <ul>
+                        <li>操作ゼロ、会議終了と同時に分析結果が届く</li>
+                        <li>営業・CS・経営層、それぞれに必要な洞察を同じタイムラインで</li>
+                        <li>会議種別・出席者・結論を1行に凝縮、上長への報告にそのまま活用</li>
+                    </ul>
+                    <p style="font-size: 0.82rem; color: var(--text-dim);">※ 現在は先行提供中です。ご利用をご希望の場合は、お問い合わせフォームよりご相談ください。</p>
+                </div>
+                <div class="diff-image">
+                    <svg viewBox="0 0 688 384" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="会議終了と同時にAIが分析し、本音・リスク・次アクションのインサイトカードを提示するフロー図">
+                        <rect width="688" height="384" fill="#FFFFFF"/>
+                        <g font-family="'Noto Sans JP',sans-serif">
+                            <rect x="44" y="150" width="140" height="84" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+                            <circle cx="114" cy="180" r="15" fill="#10B981"/>
+                            <path d="M107 180 l5 5 l9 -10" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <text x="114" y="218" font-size="13" font-weight="700" fill="#0F172A" text-anchor="middle">会議終了</text>
+                            <path d="M192 192 h44" stroke="#94A3B8" stroke-width="2" marker-end="url(#ar5)"/>
+                            <circle cx="278" cy="192" r="30" fill="rgba(68,210,255,0.14)" stroke="rgba(68,210,255,0.45)"/>
+                            <text x="278" y="197" font-size="12" font-weight="800" fill="#0369A1" text-anchor="middle">AI</text>
+                            <text x="278" y="240" font-size="10" fill="#94A3B8" text-anchor="middle">自動で分析</text>
+                            <path d="M316 192 h44" stroke="#94A3B8" stroke-width="2" marker-end="url(#ar5)"/>
+                            <rect x="372" y="56" width="272" height="272" rx="14" fill="rgba(68,210,255,0.08)" stroke="rgba(68,210,255,0.35)"/>
+                            <text x="508" y="86" font-size="13" font-weight="700" fill="#0369A1" text-anchor="middle">インサイト タイムライン</text>
+                            <rect x="392" y="100" width="232" height="52" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+                            <rect x="392" y="100" width="5" height="52" rx="2.5" fill="#0284C7"/>
+                            <text x="408" y="122" font-size="11" font-weight="700" fill="#0F172A">お客様の本音</text>
+                            <text x="408" y="140" font-size="10" fill="#475569">予算は前向き、導入時期に慎重</text>
+                            <rect x="392" y="162" width="232" height="52" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+                            <rect x="392" y="162" width="5" height="52" rx="2.5" fill="#E05A4B"/>
+                            <text x="408" y="184" font-size="11" font-weight="700" fill="#0F172A">リスク信号</text>
+                            <text x="408" y="202" font-size="10" fill="#475569">他社比較の発言あり、根拠付きで提示</text>
+                            <rect x="392" y="224" width="232" height="52" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+                            <rect x="392" y="224" width="5" height="52" rx="2.5" fill="#10B981"/>
+                            <text x="408" y="246" font-size="11" font-weight="700" fill="#0F172A">次のアクション</text>
+                            <text x="408" y="264" font-size="10" fill="#475569">事例資料の送付と再訪の日程打診</text>
+                            <rect x="392" y="288" width="180" height="24" rx="12" fill="#F1F5F9"/>
+                            <text x="404" y="304" font-size="10" fill="#475569">1行サマリーで上長報告にも</text>
+                        </g>
+                        <defs>
+                            <marker id="ar5" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#94A3B8"/></marker>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -1335,6 +1424,7 @@
                 <h3>オンライン会議の相棒</h3>
                 <p>パソコンのシステム音声を直接録音するため、Zoom・Teams・Google Meet など会議ツールを選びません。録音終了後は自動でアップロードされ、解析が始まります。</p>
                 <div class="plat-tags"><span>システム音声を直接録音</span><span>自動アップロード</span><span>長時間連続録音</span></div>
+                <a href="https://hub.gbase.ai/download/gbase" target="_blank" rel="noopener" class="plat-cta">デスクトップ版をダウンロード</a>
             </div>
             <div class="plat-card">
                 <div class="plat-icon" aria-hidden="true">
@@ -1344,6 +1434,7 @@
                 <h3>対面・外出先の入口</h3>
                 <p>ワンタップで録音を開始、バックグラウンド録音にも対応。移動中に要約を確認でき、オフィスに戻る頃には議事録が仕上がっています。</p>
                 <div class="plat-tags"><span>ワンタップ録音</span><span>バックグラウンド対応</span><span>モバイルで確認</span></div>
+                <a href="https://hub.gbase.ai/download/gbase" target="_blank" rel="noopener" class="plat-cta">iOSアプリをダウンロード</a>
             </div>
         </div>
         <p class="section-link"><a href="https://gbase.ai/blog/zoom-gijiroku/">関連記事：「Zoom議事録の作り方完全ガイド｜自動化で効率3倍【2026年版】」</a></p>
@@ -1376,11 +1467,19 @@
             </details>
             <details>
                 <summary>議事録のフォーマットは変更できますか？</summary>
-                <p>はい。複数の議事録テンプレートからワンクリックで切り替えて再生成できます。切替前のバージョンは履歴として保持されます。My Template機能を使えば、御社専用の議事録フォーマットも登録できます。</p>
+                <p>はい。業種・用途別の議事録テンプレートからワンクリックで切り替えて再生成できます。切替前のバージョンは履歴として保持されます。My Template機能を使えば、御社専用の議事録フォーマットも登録できます。</p>
+            </details>
+            <details>
+                <summary>話者の区別（誰が話したか）はできますか？</summary>
+                <p>はい。発言をスピーカー単位で自動分離して記録します。話者名はあとから一括で付け替えることができ、議事録の精度をさらに高められます。</p>
             </details>
             <details>
                 <summary>過去の録音ファイルも取り込めますか？</summary>
-                <p>はい。.wav などの音声ファイルをアップロードして、同じように文字起こし・要約・ナレッジ化ができます。これまでに蓄積した録音資産もそのまま活用いただけます。</p>
+                <p>はい。.wav・.mp3・.m4a などの音声ファイルをアップロードして、同じように文字起こし・要約・ナレッジ化ができます。これまでに蓄積した録音資産もそのまま活用いただけます。</p>
+            </details>
+            <details>
+                <summary>ミーティングインサイト（VOC分析）とは何ですか？</summary>
+                <p>会議終了と同時にAIが内容を自動分析し、お客様の本音・リスク信号・次のアクションをカード形式で提示する機能です。現在は先行提供中のため、ご利用をご希望の場合はお問い合わせフォームよりご相談ください。</p>
             </details>
             <details>
                 <summary>作成した議事録は、あとからどう活用できますか？</summary>
