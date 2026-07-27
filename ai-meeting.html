@@ -715,13 +715,16 @@
         }
         .inline-link:hover { text-decoration-color: var(--primary-deep); }
         .plat-cta {
-            display: inline-flex; align-items: center; gap: 0.3rem;
-            margin-top: auto; padding-top: 1rem;
-            font-size: 0.85rem; font-weight: 800; color: var(--primary-deep);
-            transition: gap 0.18s ease;
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.3rem;
+            margin-top: auto; align-self: flex-start;
+            padding: 0.62rem 1.3rem;
+            border-radius: 999px;
+            background: var(--primary-deep); color: #fff;
+            font-size: 0.85rem; font-weight: 800;
+            transition: gap 0.18s ease, background 0.18s ease;
         }
         .plat-cta::after { content: "→"; transition: transform 0.18s ease; }
-        .plat-cta:hover { gap: 0.55rem; }
+        .plat-cta:hover { gap: 0.55rem; background: var(--primary, #0284C7); }
         .plat-cta:hover::after { transform: translateX(2px); }
 
         /* ========= Platforms (3 entry points) ========= */
@@ -732,8 +735,13 @@
         .plat-card {
             background: var(--bg-card);
             border: 1px solid var(--border); border-radius: 14px;
-            padding: 1.75rem 1.5rem;
+            padding: 0;
             display: flex; flex-direction: column;
+            overflow: hidden;
+        }
+        .plat-body {
+            padding: 1.4rem 1.5rem 1.75rem;
+            display: flex; flex-direction: column; flex: 1;
         }
         .plat-icon {
             width: 48px; height: 48px; border-radius: 12px;
@@ -744,10 +752,14 @@
         .plat-icon svg { width: 24px; height: 24px; color: var(--primary-deep); }
         .plat-illust {
             width: 100%; height: auto; display: block;
-            border-radius: 10px;
-            margin-bottom: 1.1rem;
+            margin: 0;
+        }
+        .plat-card h4 svg {
+            width: 20px; height: 20px; flex-shrink: 0;
+            color: var(--primary-deep);
         }
         .plat-card h4 {
+            display: flex; align-items: center; gap: 0.5rem;
             font-size: 1.25rem; font-weight: 800; color: var(--primary-deep);
             letter-spacing: -0.01em;
             margin-bottom: 0.3rem;
@@ -1252,24 +1264,30 @@
         <div class="plat-wrap">
             <div class="plat-card">
                 <img src="images/plat-01-web.png" alt="ブラウザで会議の管理・検索・AIへの質問ができるWeb版のイラスト" class="plat-illust" width="1920" height="1080" loading="lazy" decoding="async">
-                <h4>Web版</h4>
-                <h3>管理と再利用のハブ</h3>
-                <p>会議の一覧・詳細から、要約・ノート・テンプレート切替、AIへの質問まで。録音ファイルのアップロード解析も、ブラウザだけで完結します。</p>
-                <a href="https://hub.gbase.ai/auth/register" target="_blank" rel="noopener" class="plat-cta">無料ではじめる</a>
+                <div class="plat-body">
+                    <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18z"/></svg>Web版</h4>
+                    <h3>管理と再利用のハブ</h3>
+                    <p>会議の一覧・詳細から、要約・ノート・テンプレート切替、AIへの質問まで。録音ファイルのアップロード解析も、ブラウザだけで完結します。</p>
+                    <a href="https://hub.gbase.ai/auth/register" target="_blank" rel="noopener" class="plat-cta">無料ではじめる</a>
+                </div>
             </div>
             <div class="plat-card">
                 <img src="images/plat-02-desktop.png" alt="オンライン会議の音声を録音するデスクトップアプリのイラスト" class="plat-illust" width="1920" height="1080" loading="lazy" decoding="async">
-                <h4>デスクトップアプリ</h4>
-                <h3>オンライン会議の相棒</h3>
-                <p>Mac / Windows 対応。パソコンのシステム音声を直接録音するため、Zoom・Teams・Google Meet など会議ツールを選びません。長時間の連続録音にも対応し、録音終了後は自動でアップロード・解析まで進みます。</p>
-                <a href="https://hub.gbase.ai/download/gbase" target="_blank" rel="noopener" class="plat-cta">デスクトップ版をダウンロード</a>
+                <div class="plat-body">
+                    <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>デスクトップアプリ</h4>
+                    <h3>オンライン会議の相棒</h3>
+                    <p>Mac / Windows 対応。パソコンのシステム音声を直接録音するため、Zoom・Teams・Google Meet など会議ツールを選びません。長時間の連続録音にも対応し、録音終了後は自動でアップロード・解析まで進みます。</p>
+                    <a href="https://hub.gbase.ai/download/gbase" target="_blank" rel="noopener" class="plat-cta">デスクトップ版をダウンロード</a>
+                </div>
             </div>
             <div class="plat-card">
                 <img src="images/plat-03-mobile.png" alt="ワンタップで録音を開始できるiOSアプリのイラスト" class="plat-illust" width="1920" height="1080" loading="lazy" decoding="async">
-                <h4>iOSアプリ</h4>
-                <h3>対面・外出先の入口</h3>
-                <p>ワンタップで録音を開始、バックグラウンド録音にも対応。移動中に要約を確認でき、オフィスに戻る頃には議事録が仕上がっています。</p>
-                <a href="https://hub.gbase.ai/download/gbase" target="_blank" rel="noopener" class="plat-cta">iOSアプリをダウンロード</a>
+                <div class="plat-body">
+                    <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg>iOSアプリ</h4>
+                    <h3>対面・外出先の入口</h3>
+                    <p>ワンタップで録音を開始、バックグラウンド録音にも対応。移動中に要約を確認でき、オフィスに戻る頃には議事録が仕上がっています。</p>
+                    <a href="https://hub.gbase.ai/download/gbase" target="_blank" rel="noopener" class="plat-cta">iOSアプリをダウンロード</a>
+                </div>
             </div>
         </div>
         <p class="section-link"><a href="https://gbase.ai/blog/zoom-gijiroku/">関連記事：「Zoom議事録の作り方完全ガイド｜自動化で効率3倍【2026年版】」</a></p>
