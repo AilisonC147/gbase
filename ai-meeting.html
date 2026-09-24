@@ -853,30 +853,27 @@
         }
         .cta-section .hero-cta { margin-bottom: 0; }
 
-        /* ========= OnPrem 分流バンド ========= */
-        .onprem-band { padding: 3.5rem 2rem; background: var(--bg-surface); border-top: 1px solid var(--border); }
-        .onprem-card {
-            max-width: 960px; margin: 0 auto;
-            display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;
-            padding: 1.8rem 2rem; border-radius: 16px;
-            background: #FFFFFF; border: 1px solid var(--border);
-            border-left: 4px solid #9BA832;
-            box-shadow: 0 10px 30px -18px rgba(15, 23, 42, 0.18);
+        /* ========= OnPrem 分流バンド（通栏浅底・cta-section 準拠） ========= */
+        .onprem-band {
+            padding: 4rem 2rem; text-align: center;
+            background: var(--bg-surface);
+            border-top: 1px solid var(--border);
         }
-        .onprem-card .op-ic {
-            flex: 0 0 auto; width: 48px; height: 48px; border-radius: 12px;
-            display: flex; align-items: center; justify-content: center;
-            background: rgba(155, 168, 50, 0.12); color: #7c882a;
+        .onprem-band .op-eyebrow {
+            display: inline-block; margin-bottom: 0.75rem;
+            font-size: 0.78rem; font-weight: 800; letter-spacing: 0.06em;
+            color: var(--primary);
+            padding: 0.3rem 0.8rem; border-radius: 999px;
+            background: var(--primary-soft);
         }
-        .onprem-card .op-txt { flex: 1 1 260px; }
-        .onprem-card .op-txt h3 { font-size: 1.1rem; font-weight: 800; color: var(--text); margin-bottom: 0.3rem; }
-        .onprem-card .op-txt p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.65; }
-        .onprem-card .op-cta {
-            flex: 0 0 auto; display: inline-flex; align-items: center; gap: 0.35rem;
-            padding: 0.7rem 1.3rem; border-radius: 10px; font-weight: 700; font-size: 0.9rem;
-            color: #FFFFFF; background: #9BA832; text-decoration: none; transition: background 0.18s ease;
+        .onprem-band h2 {
+            font-size: 1.55rem; font-weight: 800; color: var(--text);
+            margin-bottom: 0.7rem; letter-spacing: -0.01em;
         }
-        .onprem-card .op-cta:hover { background: #8a9629; }
+        .onprem-band p {
+            color: var(--text-muted); max-width: 620px;
+            margin: 0 auto 1.75rem; font-size: 0.95rem; line-height: 1.75;
+        }
 
         /* ========= Footer ========= */
         .footer {
@@ -1366,19 +1363,10 @@
 
 <!-- ========================= OnPrem 分流バンド ========================= -->
 <section class="onprem-band">
-    <div class="onprem-card">
-        <span class="op-ic" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="4" width="18" height="7" rx="1.5"/><rect x="3" y="13" width="18" height="7" rx="1.5"/>
-                <path d="M7 7.5h.01M7 16.5h.01"/>
-            </svg>
-        </span>
-        <div class="op-txt">
-            <h3>録音を社外に出せない場合は、オンプレミス版</h3>
-            <p>閉域環境で完結する GBase OnPrem なら、会議音声を外部に送信せずに文字起こし・要約が可能。官公庁・金融・製造など、セキュリティ要件の厳しい現場向けの議事録AIです。</p>
-        </div>
-        <a href="https://gbase.ai/onprem/ai-minutes/" class="op-cta">オンプレミス版を見る →</a>
-    </div>
+    <span class="op-eyebrow">オンプレミス版</span>
+    <h2>録音を社外に出せない環境にも対応</h2>
+    <p>閉域環境で完結する GBase OnPrem なら、会議音声を外部に送信せずに文字起こし・要約が可能。官公庁・金融・製造など、セキュリティ要件の厳しい現場向けの議事録AIです。</p>
+    <a href="https://gbase.ai/onprem/ai-minutes/" class="btn btn-secondary">オンプレミス版を見る →</a>
 </section>
 
 <!-- ========================= CTA ========================= -->
