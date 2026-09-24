@@ -348,6 +348,9 @@
             box-shadow: 0 24px 60px -20px rgba(15, 23, 42, 0.20),
                         0 8px 20px -12px rgba(15, 23, 42, 0.10);
         }
+        .hero-video {
+            display: block; width: 100%; height: auto;
+        }
 
         /* ========= Hero product mock (CSS-built) ========= */
         .mk { text-align: left; font-size: 0.8rem; }
@@ -959,56 +962,11 @@
     </p>
     <div class="hero-mockup-wrap">
         <div class="hero-mockup">
-            <div class="mk" role="img" aria-label="GBase AI議事録の画面イメージ：左に多言語のリアルタイム文字起こし、右にAI要約と決定事項・ToDo">
-                <div class="mk-topbar">
-                    <div class="mk-dots"><span></span><span></span><span></span></div>
-                    <span class="mk-rec">REC 00:42:13</span>
-                    <span class="mk-lang">表示言語：日本語 ▾</span>
-                </div>
-                <div class="mk-body">
-                    <div class="mk-panel">
-                        <div class="mk-panel-title">リアルタイム文字起こし <span class="mk-chip">原語で記録</span></div>
-                        <div class="mk-line">
-                            <span class="mk-speaker mk-sp-a">A</span>
-                            <div class="mk-utt">
-                                <div class="orig">We'd like to start the rollout from the Osaka branch in Q3.</div>
-                                <div class="trans">第3四半期に、大阪支社から展開を開始したいと考えています。</div>
-                            </div>
-                        </div>
-                        <div class="mk-line">
-                            <span class="mk-speaker mk-sp-b">B</span>
-                            <div class="mk-utt">
-                                <div class="orig">承知しました。では、来週までに導入スケジュール案をお送りします。</div>
-                            </div>
-                        </div>
-                        <div class="mk-line">
-                            <span class="mk-speaker mk-sp-a">A</span>
-                            <div class="mk-utt">
-                                <div class="orig">Great. Could you also include the training plan for the support team?</div>
-                                <div class="trans">ありがとうございます。サポートチーム向けの研修計画も含めていただけますか。</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mk-panel">
-                        <div class="mk-panel-title">AI要約 <span class="mk-chip">営業定例テンプレート ▾</span></div>
-                        <div class="mk-sum-block">
-                            <h5>決定事項</h5>
-                            <ul>
-                                <li>第3四半期に大阪支社から先行導入</li>
-                                <li>研修計画はサポートチーム向けを優先</li>
-                            </ul>
-                        </div>
-                        <div class="mk-sum-block">
-                            <h5>ToDo</h5>
-                            <ul>
-                                <li>導入スケジュール案の送付（来週まで）</li>
-                                <li>次回定例のアジェンダ作成</li>
-                            </ul>
-                        </div>
-                        <span class="mk-save">✓ ナレッジベースへ自動保存</span>
-                    </div>
-                </div>
-            </div>
+            <video class="hero-video" autoplay muted loop playsinline preload="auto"
+                   poster="og/ai-meeting.png"
+                   aria-label="GBase AI議事録のデモ映像">
+                <source src="video/ai-meeting-hero.mp4" type="video/mp4">
+            </video>
         </div>
     </div>
 </section>
