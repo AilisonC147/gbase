@@ -853,18 +853,19 @@
         }
         .cta-section .hero-cta { margin-bottom: 0; }
 
-        /* ========= OnPrem 分流バンド（通栏浅底・cta-section 準拠） ========= */
+        /* ========= OnPrem 分流バンド（OnPrem グリーン＋ロゴで製品区別） ========= */
         .onprem-band {
+            --op: #9BA832;
+            --op-deep: #7C882A;
             padding: 4rem 2rem; text-align: center;
-            background: var(--bg-surface);
+            background:
+                radial-gradient(ellipse 60% 72% at 50% 0%, rgba(155, 168, 50, 0.11) 0%, transparent 70%),
+                var(--bg-surface);
             border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
         }
-        .onprem-band .op-eyebrow {
-            display: inline-block; margin-bottom: 0.75rem;
-            font-size: 0.78rem; font-weight: 800; letter-spacing: 0.06em;
-            color: var(--primary);
-            padding: 0.3rem 0.8rem; border-radius: 999px;
-            background: var(--primary-soft);
+        .onprem-band .op-logo {
+            height: 34px; width: auto; margin: 0 auto 1.1rem;
         }
         .onprem-band h2 {
             font-size: 1.55rem; font-weight: 800; color: var(--text);
@@ -873,6 +874,18 @@
         .onprem-band p {
             color: var(--text-muted); max-width: 620px;
             margin: 0 auto 1.75rem; font-size: 0.95rem; line-height: 1.75;
+        }
+        .onprem-band .op-btn {
+            display: inline-flex; align-items: center; justify-content: center;
+            padding: 0.75rem 1.75rem; border-radius: 999px;
+            font-weight: 700; font-size: 0.92rem; white-space: nowrap;
+            color: var(--op-deep); background: #FFFFFF;
+            border: 1.5px solid var(--op); transition: all 0.2s;
+        }
+        .onprem-band .op-btn:hover {
+            background: var(--op); color: #FFFFFF; border-color: var(--op);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(155, 168, 50, 0.30);
         }
 
         /* ========= Footer ========= */
@@ -1309,6 +1322,14 @@
     </div>
 </section>
 
+<!-- ========================= OnPrem 分流バンド ========================= -->
+<section class="onprem-band">
+    <img class="op-logo" src="images/gbase-onprem-logo.png" alt="GBase On-Prem" width="150" height="34" loading="lazy" decoding="async">
+    <h2>録音を社外に出せない環境にも対応</h2>
+    <p>閉域環境で完結する GBase OnPrem なら、会議音声を外部に送信せずに文字起こし・要約が可能。官公庁・金融・製造など、セキュリティ要件の厳しい現場向けの議事録AIです。</p>
+    <a href="https://gbase.ai/onprem/ai-minutes/" class="op-btn">オンプレミス版を見る →</a>
+</section>
+
 <!-- ========================= FAQ ========================= -->
 <section class="section section-surface">
     <div class="container">
@@ -1359,14 +1380,6 @@
             </details>
         </div>
     </div>
-</section>
-
-<!-- ========================= OnPrem 分流バンド ========================= -->
-<section class="onprem-band">
-    <span class="op-eyebrow">オンプレミス版</span>
-    <h2>録音を社外に出せない環境にも対応</h2>
-    <p>閉域環境で完結する GBase OnPrem なら、会議音声を外部に送信せずに文字起こし・要約が可能。官公庁・金融・製造など、セキュリティ要件の厳しい現場向けの議事録AIです。</p>
-    <a href="https://gbase.ai/onprem/ai-minutes/" class="btn btn-secondary">オンプレミス版を見る →</a>
 </section>
 
 <!-- ========================= CTA ========================= -->
