@@ -835,87 +835,57 @@
         }
 
         /* ========= CTA ========= */
-        /* ========= CTA グラデーションカード（teal・gbase-series 準拠を小型化） ========= */
-        .cta-card-sec { padding: 4rem 2rem; background: var(--bg-base); }
-        .cta-card {
-            position: relative; overflow: hidden;
-            max-width: 760px; margin: 0 auto;
-            border-radius: 22px; padding: 3rem 2rem; text-align: center; color: #FFFFFF;
-            background: linear-gradient(120deg, #0369A1 0%, #0891B2 40%, #0D9488 74%, #10B981 100%);
-            box-shadow: 0 22px 50px -12px rgba(13, 148, 136, 0.42);
-        }
-        .cta-card::before {
-            content: ""; position: absolute; inset: 0;
-            background-image: radial-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1.4px);
-            background-size: 22px 22px; opacity: 0.5; pointer-events: none;
-        }
-        .cta-card::after {
-            content: ""; position: absolute; top: -45%; left: 50%;
-            width: 70%; height: 160%; transform: translateX(-50%);
-            background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.22), transparent 62%);
-            pointer-events: none;
-        }
-        .cta-card-in { position: relative; z-index: 1; max-width: 560px; margin: 0 auto; }
-        .cta-eyebrow {
-            display: inline-flex; align-items: center; gap: 0.55rem; justify-content: center;
-            font-size: 0.72rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase;
-            color: #FFFFFF; margin-bottom: 0.9rem;
-        }
-        .cta-eyebrow::before { content: ""; width: 22px; height: 2px; background: rgba(255, 255, 255, 0.7); border-radius: 2px; }
-        .cta-card h2 {
-            font-size: 1.6rem; font-weight: 800; line-height: 1.4;
-            letter-spacing: -0.01em; margin-bottom: 0.8rem; text-wrap: balance;
-        }
-        .cta-card p { color: rgba(255, 255, 255, 0.9); font-size: 0.95rem; line-height: 1.8; margin-bottom: 1.6rem; }
-        .cta-card-btns { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; }
-        .cta-card-btns a {
-            display: inline-flex; align-items: center; justify-content: center;
-            padding: 0.7rem 1.6rem; border-radius: 999px; font-weight: 700; font-size: 0.9rem;
-            transition: all 0.2s; white-space: nowrap;
-        }
-        .btn-cw { background: #FFFFFF; color: #0D9488; }
-        .btn-cw:hover { background: #ECFDF5; transform: translateY(-1px); box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18); }
-        .btn-cg { background: rgba(255, 255, 255, 0.12); color: #FFFFFF; border: 1.5px solid rgba(255, 255, 255, 0.7); }
-        .btn-cg:hover { background: rgba(255, 255, 255, 0.2); transform: translateY(-1px); }
-        @media (max-width: 768px) {
-            .cta-card-sec { padding: 3rem 1rem; }
-            .cta-card { padding: 2.5rem 1.25rem; border-radius: 18px; }
-            .cta-card h2 { font-size: 1.3rem; }
-        }
-
-        /* ========= OnPrem 分流バンド（OnPrem グリーン＋ロゴで製品区別） ========= */
-        .onprem-band {
-            --op: #9BA832;
-            --op-deep: #7C882A;
-            padding: 4rem 2rem; text-align: center;
+        .cta-section {
+            padding: 5rem 2rem; text-align: center;
             background:
-                radial-gradient(ellipse 60% 72% at 50% 0%, rgba(155, 168, 50, 0.11) 0%, transparent 70%),
-                var(--bg-surface);
+                radial-gradient(ellipse 55% 60% at 50% 50%, rgba(68, 210, 255, 0.22) 0%, transparent 75%),
+                linear-gradient(180deg, rgba(68, 210, 255, 0.1) 0%, rgba(68, 210, 255, 0.04) 100%);
             border-top: 1px solid var(--border);
             border-bottom: 1px solid var(--border);
         }
-        .onprem-band .op-logo {
-            height: 34px; width: auto; margin: 0 auto 1.1rem;
+        .cta-section h2 {
+            font-size: 1.85rem; font-weight: 800; color: var(--text);
+            margin-bottom: 0.85rem; letter-spacing: -0.02em;
         }
-        .onprem-band h2 {
-            font-size: 1.55rem; font-weight: 800; color: var(--text);
-            margin-bottom: 0.7rem; letter-spacing: -0.01em;
+        .cta-section p {
+            color: var(--text-muted); max-width: 600px;
+            margin: 0 auto 2rem; font-size: 0.98rem;
         }
-        .onprem-band p {
-            color: var(--text-muted); max-width: 620px;
-            margin: 0 auto 1.75rem; font-size: 0.95rem; line-height: 1.75;
+        .cta-section .hero-cta { margin-bottom: 0; }
+
+        /* ========= OnPrem 分流カード（浅緑×浅青グラデ・ロゴで製品区別） ========= */
+        .onprem-card-sec { padding: 4rem 2rem; background: var(--bg-base); }
+        .onprem-card {
+            position: relative;
+            max-width: 720px; margin: 0 auto;
+            border-radius: 22px; padding: 2.75rem 2rem; text-align: center;
+            background: linear-gradient(120deg, #E6F9EF 0%, #E4F4FB 52%, #E7F0FD 100%);
+            border: 1px solid rgba(13, 148, 136, 0.18);
+            box-shadow: 0 18px 44px -18px rgba(13, 148, 136, 0.28);
         }
-        .onprem-band .op-btn {
+        .onprem-card .op-logo { height: 32px; width: auto; margin: 0 auto 1rem; }
+        .onprem-card h2 {
+            font-size: 1.5rem; font-weight: 800; color: var(--text);
+            margin-bottom: 0.65rem; letter-spacing: -0.01em; text-wrap: balance;
+        }
+        .onprem-card p {
+            color: var(--text-muted); max-width: 560px;
+            margin: 0 auto 1.5rem; font-size: 0.93rem; line-height: 1.75;
+        }
+        .onprem-card .op-btn {
             display: inline-flex; align-items: center; justify-content: center;
-            padding: 0.75rem 1.75rem; border-radius: 999px;
-            font-weight: 700; font-size: 0.92rem; white-space: nowrap;
-            color: var(--op-deep); background: #FFFFFF;
-            border: 1.5px solid var(--op); transition: all 0.2s;
+            padding: 0.72rem 1.7rem; border-radius: 999px;
+            font-weight: 700; font-size: 0.9rem; white-space: nowrap;
+            color: #FFFFFF; background: #0D9488; border: 1.5px solid #0D9488; transition: all 0.2s;
         }
-        .onprem-band .op-btn:hover {
-            background: var(--op); color: #FFFFFF; border-color: var(--op);
-            transform: translateY(-1px);
-            box-shadow: 0 6px 20px rgba(155, 168, 50, 0.30);
+        .onprem-card .op-btn:hover {
+            background: #0B7F74; border-color: #0B7F74;
+            transform: translateY(-1px); box-shadow: 0 8px 20px rgba(13, 148, 136, 0.28);
+        }
+        @media (max-width: 768px) {
+            .onprem-card-sec { padding: 3rem 1rem; }
+            .onprem-card { padding: 2.25rem 1.25rem; border-radius: 18px; }
+            .onprem-card h2 { font-size: 1.25rem; }
         }
 
         /* ========= Footer ========= */
@@ -1352,12 +1322,14 @@
     </div>
 </section>
 
-<!-- ========================= OnPrem 分流バンド ========================= -->
-<section class="onprem-band">
-    <img class="op-logo" src="images/gbase-onprem-logo.png" alt="GBase On-Prem" width="150" height="34" loading="lazy" decoding="async">
-    <h2>録音を社外に出せない環境にも対応</h2>
-    <p>閉域環境で完結する GBase OnPrem なら、会議音声を外部に送信せずに文字起こし・要約が可能。官公庁・金融・製造など、セキュリティ要件の厳しい現場向けの議事録AIです。</p>
-    <a href="https://gbase.ai/onprem/ai-minutes/" class="op-btn">オンプレミス版を見る →</a>
+<!-- ========================= OnPrem 分流カード ========================= -->
+<section class="onprem-card-sec">
+    <div class="onprem-card">
+        <img class="op-logo" src="images/gbase-onprem-logo.png" alt="GBase On-Prem" width="150" height="34" loading="lazy" decoding="async">
+        <h2>録音を社外に出せない環境にも対応</h2>
+        <p>閉域環境で完結する GBase OnPrem なら、会議音声を外部に送信せずに文字起こし・要約が可能。官公庁・金融・製造など、セキュリティ要件の厳しい現場向けの議事録AIです。</p>
+        <a href="https://gbase.ai/onprem/ai-minutes/" class="op-btn">オンプレミス版を見る →</a>
+    </div>
 </section>
 
 <!-- ========================= FAQ ========================= -->
@@ -1412,17 +1384,14 @@
     </div>
 </section>
 
-<!-- ========================= CTA（グラデーションカード） ========================= -->
-<section class="cta-card-sec">
-    <div class="cta-card">
-        <div class="cta-card-in">
-            <span class="cta-eyebrow">Get Started</span>
-            <h2>録音ボタンを押すだけ。<br>会議のすべてが、御社のナレッジになります。</h2>
-            <p>導入相談・無料デモ・お見積もりなど、お気軽にご相談ください。</p>
-            <div class="cta-card-btns">
-                <a href="https://gbase.ai/contact" class="btn-cw">お問い合わせ</a>
-                <a href="https://hub.gbase.ai/auth/register" class="btn-cg">無料ではじめる</a>
-            </div>
+<!-- ========================= CTA ========================= -->
+<section class="cta-section">
+    <div class="container">
+        <h2>録音ボタンを押すだけ。<br>会議のすべてが、御社のナレッジになります。</h2>
+        <p>導入相談・無料デモ・お見積もりなど、お気軽にご相談ください。</p>
+        <div class="hero-cta">
+            <a href="https://gbase.ai/contact" class="btn btn-primary">お問い合わせ</a>
+            <a href="https://hub.gbase.ai/auth/register" class="btn btn-secondary">無料ではじめる</a>
         </div>
     </div>
 </section>
